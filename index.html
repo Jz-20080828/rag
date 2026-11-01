@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CourseMate — Undergraduate Course Q&amp;A</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">🎓</span>
+        <div>
+          <h1>CourseMate</h1>
+          <p class="tagline">Retrieval-augmented Q&amp;A grounded in your course materials</p>
+        </div>
+      </div>
+      <span class="badge">RAG · demo</span>
+    </header>
+
+    <main class="layout">
+      <section class="chat-panel">
+        <div id="chat" class="chat" aria-live="polite"></div>
+
+        <div class="composer">
+          <div id="chips" class="chips" aria-label="Sample queries"></div>
+          <form id="form" class="form">
+            <input id="input" type="text" autocomplete="off"
+                   placeholder="Ask a course question, e.g. “How do I differentiate sin(x²)?”" />
+            <button type="submit">Ask</button>
+          </form>
+        </div>
+      </section>
+
+      <aside class="sources-panel">
+        <h2>Retrieved sources</h2>
+        <p class="hint">Top matches from the knowledge base, ranked by relevance.</p>
+        <div id="sources" class="sources"></div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="knowledge-base.js"></script>
+  <script src="retrieval.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
